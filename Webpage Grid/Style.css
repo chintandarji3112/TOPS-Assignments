@@ -1,0 +1,282 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    grid-template-areas:
+        "logo ul button"
+        "video card form"
+        "pages sub soscial";
+}
+
+/* HEADER NAVIGATION BAR */
+
+nav {
+    padding: 20px;
+    background-color: rgb(73, 73, 159);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* LOGO */
+
+.logo p {
+    padding-left: 50px;
+    padding-top: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.logo p:hover {
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* NAVIGATION BAR */
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    padding-top: 25px;
+    display: inline-block;
+    list-style: none;
+}
+
+nav li a {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0px 30px;
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+/* BUTTON */
+
+nav .btn {
+    text-align: right;
+    padding-top: 30px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 15px;
+    background: transparent;
+    border-radius: 15px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+
+/* MAIN CONTENT */
+
+/* CONTAINER  */
+
+.Container {
+    padding-top: 50px;
+    display: grid;
+    /* grid-template-areas:
+        "Video Card Form"; */
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+}
+
+/* CARDS */
+
+.Cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    text-align: end;
+}
+
+img {
+    height: 280px;
+    width: 200px;
+}
+
+.Card1 {
+
+    height: 55vh;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center
+}
+
+.Card2 {
+    height: 55vh;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center
+}
+
+.Card3 {
+    height: 55vh;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center
+}
+
+.Cards button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* FORM */
+
+.Form {
+    background-color: rgb(43, 120, 142);
+}
+
+.Form h2 {
+    text-align: center;
+    color: black;
+}
+
+.Form h2:hover {
+    color: white;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.Form .input_box {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.Form .input_box {
+    position: relative;
+    margin-top: 30px;
+    width: 80%;
+    height: 50px;
+}
+
+.Form .input_box input {
+    margin-left: 40px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    transition: all 0.2 ease;
+    color: #333;
+    border-bottom: 1.5px solid #aaaaaa;
+}
+
+
+.Form .btn {
+    margin-top: 70px;
+    margin-left: 130px;
+    font-size: larger;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    background-color: rgb(70, 127, 143);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.Form .btn:hover {
+    color: black;
+    transition: 0.7s;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 50px;
+    grid-area: footer;
+    background-color: rgb(73, 73, 159);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 15px;
+    text-align: center;
+}
+
+/* PAGES */
+
+.Pages {
+    display: grid;
+    justify-content: left;
+}
+
+.Pages ul {
+    list-style: none;
+}
+
+.Pages a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* SUBCRIBE */
+
+.Sub {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.Sub input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.Sub button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* SOSCIAL ICONS */
+
+.Soscial {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 30px;
+
+}
+
+.Soscial i {
+    text-decoration: none;
+    color: #438bf0;
+    cursor: pointer;
+}
+
+.Soscial i:hover {
+    color: black;
+    transition: 0.7s;
+}

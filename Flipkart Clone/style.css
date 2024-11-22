@@ -1,0 +1,388 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+nav{
+    /* position: fixed; */
+    display: flex;
+    background-color: antiquewhite;
+}
+
+nav .Logo img{
+    padding: 10px 30px 10px 100px;
+    height: 50px;
+    width: 220px;
+}
+
+nav .Logo img:hover{
+    cursor: pointer;
+}
+
+nav .search_bar {
+    padding: 20px 20px 10px 20px;
+}
+
+nav .search_bar input{
+    width: 500px;
+    height: 20px;
+    padding: 7px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+nav .Login{
+    padding: 15px 20px 10px 20px;
+}
+
+nav button{
+    padding: 15px;
+    border-radius: 10px;
+    border: hidden;
+}
+
+nav button:hover{
+    cursor: pointer;
+    background-color: dodgerblue;
+    transition: 0.7s;
+}
+
+nav .Cart{
+    padding: 15px 20px 10px 20px;
+}
+
+nav .Sellar{
+    padding: 15px 20px 10px 20px;
+}
+
+nav .Opetions{
+    padding: 15px 20px 10px 50px;
+}
+
+.Head{
+    margin: 15px;
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.Head:hover{
+    cursor: pointer;
+}
+
+.Head .Offer{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Mobile{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .TV{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Electronics{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Fashion{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Beauty{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Home{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Furniture{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Travel{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head .Grocery{
+    padding: 0px 0px 0px 50px;
+}
+
+.Head p{
+    text-align: center;
+}
+
+body{
+    background-color: aliceblue;
+    overflow-x: scroll;
+}
+
+.Slider{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.h{
+    background-color: white;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+.Card{
+    background-color: white;
+    text-align: center;
+    /* height: 40vh; */
+    /* padding: 5px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    overflow-x: auto;
+    gap: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 6px;
+    padding-bottom: 12px;
+}
+
+.Card img{
+    height: 200px;
+    width: 150px;
+}
+
+.Card p{
+    padding-top: 10px;
+}
+
+.Card::-webkit-scrollbar{
+    display: none;
+}
+
+
+.Card_1 {
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 0.5px solid grey;
+    border-radius: 10px; 
+}
+
+.Card img:hover{
+    /* height: 205px;
+    width: 155px; */
+    transition: 0.5s;
+}
+
+.Card_2 {
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+/* .Card_1 p{
+    padding-top: 10px;
+} */
+
+.Card_3 {
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.Card_4 {
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.Card_5 {
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.Card_6 {
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.Gridy{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color: white;
+    gap: 10px;   
+}
+
+.Gridy #Poster {
+    padding: 10px;
+    background-color: white;   
+}
+
+.Gridy img {
+    height: 200px;
+    width: 150px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.Add1{
+    margin-top: 20px;
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 0.5px solid grey;
+    border-radius: 10px; 
+}
+
+.Add2{
+    margin-top: 20px;
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 0.5px solid grey;
+    border-radius: 10px; 
+}
+
+.Add3{
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 0.5px solid grey;
+    border-radius: 10px; 
+}
+
+
+.Add4{
+    height: 260px;
+    width: 200px;
+    padding: 10px;
+    border: 0.5px solid grey;
+    border-radius: 10px; 
+}
+
+#Poster img{
+    justify-content: right;
+    height: 500px;
+    width: 1100px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #212121;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+    border-bottom: 1px solid #383838;
+    padding-bottom: 20px;
+    /* justify-content: inline-block; */
+}
+
+.footer-section {
+    max-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.address-section p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.footer-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #888888;
+}
+
+.footer-payment-options img {
+    margin-left: 10px;
+    width: 100%;
+    margin-right: 20px;
+}

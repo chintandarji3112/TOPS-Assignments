@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Strength Checker</title>
+    <style>
+        #password-strength {
+            width: 200px;
+            height: 20px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 16px;
+        }
+        
+        .weak {
+            background-color: #ffcccc;
+        }
+        
+        .medium {
+            background-color: #ffffcc;
+        }
+        
+        .strong {
+            background-color: #ccffcc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Strength Checker</h1>
+    <input type="password" id="password" placeholder="Enter your password">
+    <div id="password-strength"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Wait for the document to be ready
+        $(document).ready(function() {
+            // Bind an event listener to the password input field
+            $('#password').on('input', function() {
+                // Get the password value
+                var password = $(this).val();
+                
+                // Check the password strength
+                var strength = checkPasswordStrength(password);
+                
+                // Update the password strength display
+                $('#password-strength').text(strength.message);
+                $('#password-strength').removeClass('weak medium strong');
+                $('#password-strength').addClass(strength.class);
+            });
+        });
+
+        // Function to check the password strength
+        function checkPasswordStrength(password) {
+            // Initialize the strength object
+            var strength = {
+                message: '',
+                class: ''
+            };
+
+            // Check if the password is empty
+            if (password.length === 0) {
+                // If the password is empty, display a message
+                strength.message = 'Please enter a password';
+                strength.class = 'weak';
+                return strength;
+            }
+
+            // Check if the password is weak (less than 8 characters)
+            if (password.length < 8) {
+                // If the password is weak, display a message
+                strength.message = 'Weak password (less than 8 characters)';
+                strength.class = 'weak';
+                return strength;
+            }
+
+            // Check if the password is medium (8-12 characters, no special characters)
+            if (password.length >= 8 && password.length <= 12 && !/[!@#$%^&*()_+={};':"|,.<>?]/.test(password)) {
+                // If the password is medium, display a message
+                strength.message = 'Medium password (8-12 characters, no special characters)';
+                strength.class = 'medium';
+                return strength;
+            }
+
+            // Check if the password is strong (more than 12 characters, contains special characters)
+            if (password.length > 12 && /[!@#$%^&*()_+={};':"|,.<>?]/.test(password)) {
+                // If the password is strong, display a message
+                strength.message = 'Strong password (more than 12 characters, contains special characters)';
+                strength.class = 'strong';
+                return strength;
+            }
+
+            // If none of the above conditions are met, password is medium
+            strength.message = 'Medium password';
+            strength.class = 'medium';
+            return strength;
+        }
+    </script>
+</body>
+</html>

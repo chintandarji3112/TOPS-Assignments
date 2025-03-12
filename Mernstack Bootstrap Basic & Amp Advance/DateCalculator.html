@@ -1,0 +1,64 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded shadow-md w-full max-w-sm">
+        <h1 class="text-2xl font-semibold mb-4 text-center">Date Interval</h1>
+        <div class="mb-4">
+            <label class="block text-gray-700">From:</label>
+            <div class="relative">
+                <input type="text" id="fromDate" class="w-full px-3 py-2 border rounded" value="01/25/1990">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <i class="fas fa-calendar-alt text-gray-500"></i>
+                </span>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">To:</label>
+            <div class="relative">
+                <input type="text" id="toDate" class="w-full px-3 py-2 border rounded" value="05/26/2016">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <i class="fas fa-calendar-alt text-gray-500"></i>
+                </span>
+            </div>
+        </div>
+        <div class="text-center mb-4">
+            <button id="calculateBtn" class="bg-blue-500 text-white px-4 py-2 rounded">Calculate</button>
+        </div>
+        <div id="result" class="bg-blue-500 text-white p-4 rounded hidden">
+            <p>Date interval between</p>
+            <p id="dateRange"></p>
+            <p class="mt-2">In years :<span id="years"></span></p>
+            <p>In months :<span id="months"></span></p>
+            <p>In weeks :<span id="weeks"></span></p>
+            <p>In days :<span id="days"></span></p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#calculateBtn').click(function() {
+                var fromDate = new Date($('#fromDate').val());
+                var toDate = new Date($('#toDate').val());
+
+                var timeDiff = Math.abs(toDate.getTime() - fromDate.getTime());
+                var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                var weeksDiff = Math.floor(daysDiff / 7);
+                var monthsDiff = Math.floor(daysDiff / 30.44);
+                var yearsDiff = Math.floor(daysDiff / 365.25);
+
+                $('#dateRange').text($('#fromDate').val() + " and " + $('#toDate').val());
+                $('#years').text(yearsDiff);
+                $('#months').text(monthsDiff);
+                $('#weeks').text(weeksDiff);
+                $('#days').text(daysDiff);
+
+                $('#result').removeClass('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
